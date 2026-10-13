@@ -1,0 +1,396 @@
+/* a4stylesheet.css
+   A4: Intro CSS Fill-in Template
+   Instructions: rename this file to styles.css and complete each TODO block.
+*/
+
+
+
+
+
+/* ===== Base styles (mostly done) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #fff;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.header-inner {
+  /* TODO A (Flexbox):
+     Make the brand appear on the left and the navigation on the right.
+     Requirements:
+       - Use flexbox
+       - Center items vertically
+       - Put space between left and right
+  */
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.brand .dot {
+  /* TODO B (Color):
+     Make the dot a light blue accent color (choose a readable blue).
+  */
+  color: #3a88a8;
+}
+
+.site-nav a {
+  margin-left: 18px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #444;
+}
+
+
+
+
+
+
+/* ===== Hero ===== */
+.hero {
+  /* TODO C (Background image hero):
+     Turn this into a hero banner with a background image.
+     Requirements:
+       - Use a background image URL (use the one below)
+       - Make it cover the area and center it
+       - Add a light overlay so text is readable (hint: use a linear-gradient + image)
+       - Set a minimum height (e.g., 360px)
+  */
+  background-image: linear-gradient(rgba(246,243,233,.88), rgba(246,243,233,.72)), url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60"); background-size: cover; background-position: center; min-height: 420px;
+  /* My image:
+     https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60
+  */
+}
+
+.hero-content {
+  /* TODO D (Center content):
+     Center the hero text horizontally.
+     Add vertical padding so it doesn't feel cramped.
+  */
+  text-align: center; padding: 80px 0;
+}
+
+.hero h1 {
+  margin: 0;
+  /* TODO E (Typography):
+     Make the headline large and uppercase.
+     (e.g., font-size around 42–48px, text-transform uppercase)
+  */
+  font-size: 48px; text-transform: uppercase; color: #24483F; line-height: 1.12; max-width: 800px; margin-inline: auto;
+}
+
+.hero-subhead {
+  margin: 6px 0 22px;
+  /* TODO F (Typography):
+     Make this slightly smaller than h1 and a softer color.
+     (e.g., font-size ~20–24px; color #555)
+  */
+  font-size: 22px; color: #374f46; max-width: 640px; margin: 20px auto 28px;
+}
+
+
+
+
+
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.btn-dark {
+  /* TODO G (Button styling):
+     Make this a dark filled button with white text.
+     (e.g., background #333; color #fff)
+  */
+  background: #24483F; color: #fff; border: 2px solid #24483F;
+}
+
+.btn-outline {
+  /* TODO H (Button styling):
+     Make this an outlined button with a blue border and matching text.
+     (e.g., border: 2px solid ...; color: ...; background: transparent)
+  */
+  border: 2px solid #276780; color: #276780; background: transparent;
+}
+
+/* ===== Features (3 columns) ===== */
+.features {
+  padding: 42px 0;
+}
+
+.features-grid {
+  /* TODO I (Layout):
+     Arrange the three feature blocks in a row (desktop).
+     Requirements:
+       - Use flexbox
+       - Add a gap between items (e.g., 26px)
+  */
+  display: flex; gap: 28px;
+}
+
+.feature {
+  /* TODO J (Sizing / alignment):
+     Make each feature take equal width and center its text.
+  */
+  flex: 1; text-align: center;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #ddd;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  color: #666;
+  font-size: 22px;
+}
+
+/* ===== Featured content ===== */
+.featured {
+  padding: 42px 0 36px;
+  background: #f7f7f7;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-lede {
+  text-align: center;
+  max-width: 680px;
+  margin: 10px auto 22px;
+  color: #666;
+  font-size: 13px;
+}
+
+.media {
+  background: #eaeaea;
+  border: 1px solid #ddd;
+  height: 260px;
+  display: grid;
+  place-items: center;
+}
+
+
+
+
+
+
+/* ===== Secondary content (2 cards) ===== */
+.secondary {
+  padding: 34px 0 44px;
+}
+
+.secondary-grid {
+  /* TODO K (Layout):
+     Put the two cards next to each other on desktop.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 26px)
+  */
+  display: flex; gap: 28px;
+}
+
+.card {
+  /* TODO L (Card styling):
+     Give each card a border and make it take equal width.
+     (Hint: flex: 1; border: 1px solid #eee)
+  */
+  flex: 1; border: 1px solid #d8d9cd;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-text {
+  padding: 18px;
+}
+
+.card-text h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-text p {
+  margin: 0 0 14px;
+  color: #666;
+  font-size: 13px;
+}
+
+.card-image {
+  min-height: 160px;
+  /* TODO M (Image block):
+     Make the card image behave like a background image:
+       - cover
+       - centered
+  */
+  background-size: cover; background-position: center;
+}
+
+/* Optional images (already provided) */
+.img-a {
+  background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=60");
+}
+.img-b {
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=60");
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: #f7f7f7;
+  padding: 42px 0;
+}
+
+.cta-inner {
+  /* TODO N (Center CTA):
+     Center the CTA text and button.
+  */
+  text-align: center;
+}
+
+
+
+
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  padding: 24px 0;
+}
+
+.footer-inner {
+  /* TODO O (Footer layout):
+     Arrange footer-left on the left and footer link columns on the right.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 24px)
+       - Space items out (left/right)
+  */
+  display: flex; gap: 24px; justify-content: space-between; align-items: flex-start;
+}
+
+.footer-left {
+  max-width: 360px;
+  color: #666;
+  font-size: 12px;
+}
+
+.footer-left a { color: #3a88a8; }
+
+.footer-cols {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-col h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin: 6px 0;
+}
+
+
+/* A3 palette and responsive refinements */
+:root { color-scheme: light; }
+body { color: #252B29; background: #F6F3E9; }
+.site-header { background: #F6F3E9; border-color: #d8d9cd; }
+.brand { margin: 0; color: #24483F; white-space: nowrap; font-size: 24px; }
+.site-nav ul { display: flex; gap: 20px; margin: 0; padding: 0; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+.site-nav a { margin-left: 0; display: inline-block; padding: 10px 0; color: #24483F; }
+section { scroll-margin-top: 24px; }
+h2,h3 { color: #24483F; }
+.features { padding-block: 56px; }
+.features-grid { margin-top: 28px; }
+.feature h3 { margin: 0 0 12px; font-size: 20px; }
+.feature p { margin: 0; }
+.featured,.cta { background: #e8ede5; }
+.section-title { font-size: 24px; letter-spacing: .03em; }
+.section-lede { font-size: 16px; color: #374f46; max-width: 700px; margin-block: 16px 28px; }
+.media { height: auto; margin: 0; padding: 20px; background: #F6F3E9; border-color: #d8d9cd; }
+.media img { display: block; max-width: 100%; height: auto; }
+.media figcaption { margin-top: 12px; color: #374f46; font-size: 14px; text-align: center; }
+.secondary { padding-block: 48px 56px; }
+.secondary-grid { margin-top: 28px; }
+.card { background: #fcfaf3; min-width: 0; }
+.card-text { padding: 24px; }
+.card-text h3 { font-size: 16px; }
+.card-text p { color: #374f46; font-size: 15px; margin: 0; }
+.img-a { background-image: url("lakeside-path.jpg"); }
+.img-b { background-image: url("route-sketch.svg"); background-color: #e8ede5; background-size: contain; background-repeat: no-repeat; }
+.cta h2 { margin: 0 0 12px; font-size: 30px; }
+.cta p { max-width: 650px; margin: 12px auto; }
+.about { padding-block: 40px; max-width: 720px; }
+.about h2 { margin-top: 0; }
+.about p { margin-bottom: 0; }
+.site-footer { background: #24483F; border: 0; }
+.footer-left,.footer-col a { color: #F6F3E9; font-size: 14px; }
+.footer-col { margin: 0; padding: 0; list-style: none; }
+.footer-col a { padding: 6px 0; }
+a { text-underline-offset: 4px; }
+a:hover { text-decoration: underline; }
+.btn { font-weight: 700; padding: 12px 20px; border-radius: 4px; }
+.btn-dark:hover { background: #19382f; }
+.btn-outline:hover { background: #276780; color: white; }
+a:focus-visible { outline: 3px solid #276780; outline-offset: 4px; }
+.site-footer a:focus-visible { outline-color: #C7A460; }
+::selection { background: #C7A460; color: #252B29; }
+@media (max-width: 850px) {
+ .header-inner { flex-direction: column; gap: 8px; }
+ .site-nav ul { justify-content: center; gap: 16px; }
+ .card { grid-template-columns: 1fr; }
+ .card-image { min-height: 200px; }
+}
+@media (max-width: 600px) {
+ .hero { min-height: 360px; }
+ .hero-content { padding: 56px 0; }
+ .hero h1 { font-size: 36px; }
+ .hero-subhead { font-size: 20px; }
+ .features-grid,.secondary-grid,.footer-inner { flex-direction: column; }
+ .features-grid { gap: 32px; }
+ .feature { text-align: left; }
+ .site-nav a { font-size: 11px; }
+ .section-title { font-size: 22px; }
+ .secondary-grid { gap: 24px; }
+ .footer-inner { gap: 12px; }
+}
